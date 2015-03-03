@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+ 
+ 
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- 
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+		<property name="connection.useUnicode">true</property>
+		<property name="connection.characterEncoding">utf8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">wodwl</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">500</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<property name="hibernate.c3p0.validate">true</property>
+		<property name="hibernate.c3p0.preferredTestQuery ">select 1 </property>
+		<property name="hibernate.c3p0.idleConnectionTestPeriod ">18000</property>
+		<property name="hibernate.c3p0.maxIdleTime">25000</property>
+		<property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<mapping resource="Table01.xml" />
+		 -->
+		 
+		 <!-- Database connection settings 
+	    <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+	    <property name="connection.url">jdbc:oracle:thin:@172.17.12.106:1521:orcl</property>
+	    <property name="connection.username">ams</property>
+	    <property name="connection.password">ams</property>
+	    -->
+	
+	    <!-- JDBC connection pool (use the built-in) 
+	    <property name="connection.pool_size">1</property>-->
+	
+	    <!-- SQL dialect 
+	    <property name="dialect">org.hibernate.dialect.HSQLDialect</property>-->
+	
+	    <!-- Enable Hibernate's automatic session context management 
+	    <property name="current_session_context_class">thread</property>-->
+	
+	    <!-- Disable the second-level cache  
+	    <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+	
+	    <!-- Echo all executed SQL to stdout 
+	    <property name="show_sql">true</property>
+	-->
+	    <!-- Drop and re-create the database schema on startup 
+	    <property name="hbm2ddl.auto">update</property>-->
+	    
+	    <!-- 
+	    <mapping resource="Table01.hbm.xml"/>
+	    <mapping resource="Table02.hbm.xml"/>
+	    <mapping resource="Table0102.hbm.xml"/>
+	    
+	    <mapping class="entity.Table0102"/>
+	    <mapping class="entity.Table01Temp"/>
+	    <mapping class="entity.Table03"/>
+	     -->
+	</session-factory>
+	
+	
+</hibernate-configuration>
+   

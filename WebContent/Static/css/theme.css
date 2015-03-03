@@ -1,0 +1,25 @@
+
+/* blue */
+.blue .menu li,
+ { 
+    background-color:#1798D1;
+}
+.blue .menu li a:hover { 
+    background-color:#317ef3;
+}
+
+#tabs_list.blue li{
+    border: 1px solid #1798D1;
+    background-color: #1798D1;
+}
+/*searchContent*/
+.searchContent .title{
+    border-bottom:1px solid #1798D1;
+}
+.searchContent #generated_graphs a.blue {
+	color:#1798D1;
+}
+
+#logo .blue{
+    background:url("../images/logo.png");
+}

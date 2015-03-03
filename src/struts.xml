@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts> 
+
+ 	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.custom.i18n.resources" value="resources/message"/>
+	<constant name="struts.action.extension" value="do,action"/>
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.serve.static.browserCache" value="false" />
+	
+	<package name="ipran" namespace="/" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="loginValidationInterceptor" class="interceptor.LoginValidation"></interceptor>
+			<interceptor name="gobalExceptionCatchInterceptor" class="interceptor.GobalExceptionCatch"></interceptor>
+			
+			<interceptor-stack name="interceptorStacks">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginValidationInterceptor"></interceptor-ref>
+				<interceptor-ref name="gobalExceptionCatchInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<global-results>
+			<result name="redirectToLogin" type="redirect">/login.do</result>
+			<result name="error">/WEB-INF/jsp/error.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="exception.IpRanException"></exception-mapping>
+		</global-exception-mappings>
+	
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="input">/WEB-INF/jsp/login.jsp</result> 
+			<result name="success" type="redirect">/performanceManageTable.do</result>  
+		</action>
+		
+		<action name="performanceManageTable_*" class="performanceManageTableAction" method="{1}">
+			<interceptor-ref name="interceptorStacks"></interceptor-ref>
+			<result name="success">/WEB-INF/jsp/performanceManageTable.jsp</result>
+		</action>
+		
+		<action name="performanceManageChart_*" class="performanceManageChartAction" method="{1}">
+			<interceptor-ref name="interceptorStacks"></interceptor-ref>  
+			<result name="success">/WEB-INF/jsp/performanceManageChart.jsp</result>  
+		</action>
+		
+		<action name="performanceManageChartSearch" class="performanceManageTableAction" method="search">
+			<interceptor-ref name="interceptorStacks"></interceptor-ref>  
+			<result type="stream"></result>  
+		</action>
+		 
+	</package>
+ 
+</struts> 

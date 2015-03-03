@@ -1,0 +1,151 @@
+body{
+    font-family:'Microsoft YaHei UI';
+    font-size:14px;
+    height:100%;
+}
+html{	
+    background-image: url("../images/bg_pattern.gif");
+    position:relative;
+    height:100%;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+h2,
+ul,
+ul li{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.page{
+    width:1077px;
+    margin:0 auto;
+    background-color: #fff;
+}
+.selected a{
+    color:#f60;
+}
+input{
+    border:1px solid #999;
+}
+
+/*header*/
+#header {
+    height: 55px;
+    width: auto;    
+    background-image: url("../images/bg_pattern.gif");
+}
+#logo {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+#logo img{
+    vertical-align:bottom;
+    width: 200px;
+    height: 46px;
+    position: absolute;
+}
+.setTheme{
+    float:right;
+    margin-right:15px;
+}
+
+.setTheme .color span {
+    margin-left: 6px;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    line-height: 22px;
+    cursor: pointer;
+    /*float: left;*/
+}
+.setTheme #blue {
+    background: url("../images/button_blue.png") no-repeat scroll left top transparent;
+}
+.setTheme #orage {
+    background: url("../images/button_orange.png") no-repeat scroll left top transparent;
+}
+
+/*nav*/
+.nav{
+	width: 1077px;
+	background-color:#fff;
+}
+
+.menu { 
+     height:30px; 
+     line-height:30px;
+}
+.menu li { 
+    float:left; 
+    position:relative;
+    border-right:1px solid #fff;
+}
+.menu li a:hover { 
+    color:#fff; 
+}
+.menu li a { 
+    display:block; 
+    float:left; 
+    height:30px; 
+    line-height:30px; 
+    padding:0 20px;
+    color:#fff;
+}
+.menu li ul { 
+    position:absolute; 
+    left:0; 
+    width:150px; 
+    border:1px solid #fff; 
+    display:none; 
+    z-index:1000;
+}
+.menu li ul ul{
+    z-index:2000;
+}
+.menu li ul a {
+     width:110px;
+}
+.one { 
+    border:1px solid #000; 
+    top:30px; 
+}
+.menu li ul.two { 
+    left:150px; 
+}
+.one li a.more { 
+    background:url("../images/there.png") no-repeat 130px center;
+}
+.one li a.more:hover { 
+    background:url("../images/there.png") no-repeat 130px center;
+}
+.menu li ul.hdw { 
+    left:150px; 
+}
+.menu li ul.hdwq { 
+    left:150px;
+}
+ 
+ /*footer*/
+.footer{
+	background-color:#fff;
+    margin-top:35px;
+    /*position:absolute;
+    bottom:0;*/
+}
+#footer_logo{	
+    background-color:#1798d1;
+    height: 45px;
+}
+.footer .copyright{
+    height: 15px;
+    display:inline-block;
+    margin-top:11px;
+    text-align:center;
+    font-size:11px;
+    color:#fff;
+    width: 1077px; 
+}
