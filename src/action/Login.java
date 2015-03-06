@@ -46,4 +46,13 @@ public class Login extends BaseAction implements ModelDriven<LoginForm> {
 		
 		return useInfo == null ? INPUT : SUCCESS;
 	}
+	
+	/**
+	 * log out
+	 * @return
+	 */
+	public String logout() {
+		this.setUserInfoToSession(null);
+		return "redirectToLogin";
+	}
 }

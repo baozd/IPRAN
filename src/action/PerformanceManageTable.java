@@ -2,6 +2,9 @@ package action;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,6 +42,15 @@ public class PerformanceManageTable extends BaseAction implements ModelDriven<Pe
 	}
 	
 	public String execute() {
+		
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		performanceManageTableForm.setStartDate(sdf.format(calendar.getTime()));
+		calendar.add(Calendar.MONTH, 1);
+		performanceManageTableForm.setEndDate(sdf.format(calendar.getTime()));
+ 
 		return SUCCESS;
 	}
 	

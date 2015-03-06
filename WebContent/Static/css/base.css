@@ -1,11 +1,13 @@
 body{
-    font-family:'Microsoft YaHei UI';
+   /*  font-family:'Microsoft YaHei UI'; */
     font-size:14px;
     height:100%;
 }
+input{	
+    /* font-family:'Microsoft YaHei UI'; */
+}
 html{	
     background-image: url("../images/bg_pattern.gif");
-    position:relative;
     height:100%;
 }
 a{
@@ -23,6 +25,7 @@ ul li{
     width:1077px;
     margin:0 auto;
     background-color: #fff;
+    z-index:100;
 }
 .selected a{
     color:#f60;
@@ -36,6 +39,7 @@ input{
     height: 55px;
     width: auto;    
     background-image: url("../images/bg_pattern.gif");
+    position:relative;
 }
 #logo {
     float: left;
@@ -48,27 +52,68 @@ input{
     height: 46px;
     position: absolute;
 }
-.setTheme{
+#header .right{
+	margin-top:10px;
     float:right;
-    margin-right:15px;
 }
-
-.setTheme .color span {
+#header .logout_btn,
+#header .setTheme,
+#header .setFontFamily{	
+    float:left;
+}
+#header .logout_btn a{
+	padding:5px 15px;
+    color:#fff;
+    display:inline-block
+}
+#header. setTheme .color span {
     margin-left: 6px;
     width: 19px;
     height: 19px;
     display: inline-block;
     line-height: 22px;
     cursor: pointer;
-    /*float: left;*/
 }
-.setTheme #blue {
-    background: url("../images/button_blue.png") no-repeat scroll left top transparent;
+#header .setTheme .color{	
+    margin-top: 4px;
 }
-.setTheme #orage {
-    background: url("../images/button_orange.png") no-repeat scroll left top transparent;
+#header .setFontFamily{	
+	color:#fff;
 }
-
+#header .setFontFamily .fontFamily ,
+#header .setcolor{
+	margin-left:10px;
+	padding:5px 15px;
+	color:#fff;
+    display: inline-block;
+    cursor: pointer;    
+}
+#header .setFontFamily :hover,
+#setFontFamily li:hover,
+#header .setcolor :hover,
+#setcolor li:hover{	
+    cursor: pointer;   
+}
+#setcolor,
+#setFontFamily{	
+    display: none;
+    position:absolute;
+    top:38px;
+    right:58px;
+    z-index:1000;
+}
+#setFontFamily{	
+    right:0;
+}
+#setcolor li,
+#setFontFamily li{
+    padding:5px;
+    width:100px;
+}
+#setFontFamily li a,
+#setcolor li a{	
+    color:#fff;
+}
 /*nav*/
 .nav{
 	width: 1077px;
@@ -137,7 +182,6 @@ input{
     bottom:0;*/
 }
 #footer_logo{	
-    background-color:#1798d1;
     height: 45px;
 }
 .footer .copyright{

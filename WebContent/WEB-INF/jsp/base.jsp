@@ -16,7 +16,8 @@
 		
 		<link type="text/css" rel="stylesheet" href="Static/css/jquery.slideBox.css"/>
 		<link type="text/css" rel="stylesheet" href="Static/css/base.css"/>
-		<link type="text/css" rel="stylesheet" href="Static/css/theme.css"/>		
+		<link type="text/css" rel="stylesheet" href="Static/css/theme.css"/>
+		<link type="text/css" rel="stylesheet" href="Static/css/font.css"/>
 		
 		
 		<title>
@@ -25,18 +26,30 @@
 		<decorator:head />
 	</head>
 	
-	<body class="page"  class='blue'>
+	<body class="page YaHei_ui"  id='blue' >
 	   <div id='header' class='blue'>
             <a id="logo"><img src=""  class='blue'/></a>
-            <div class="setTheme">
-                <%-- <span>设定主题颜色</span> --%>
-                <span>当前主题色:<span id='setcolor'></span></span>
-                <div class='color'>
-                	<span id='blue'></span>
-                	<span id='orage'></span>
-                </div>
-            </div>
-
+          	<div class='right'>
+	          	<div class='logout_btn blue'>
+	            	<a href='login.do' tabindex=1>注销</a>
+	            </div>
+	            <div class="setTheme">
+	                <div class='setcolor blue'>主题色</div>
+	                 <div id='setcolor'>
+		               	<ul>
+			              	<li id="color_blue"><a href="#">天蓝牧场</a></li>
+                			<li id="color_orange"><a href="#">花园街</a></li>
+			            </ul>
+		             </div>
+	            </div>
+	            <div class="setFontFamily">
+			        <div class='fontFamily blue'>字体类型</div>
+			        <ul id='setFontFamily'>
+			            <li id="YaHei" class='blue'><a href="#">微软雅黑</a></li>
+			            <li id="songTi" class='blue'><a href="#">宋体</a></li>
+			        </ul>
+			    </div>
+          	</div>
         </div>
 		<div id="bannerPics" class="slideBox">
 		  <ul class="items">		    
@@ -68,8 +81,8 @@
 
 	   <decorator:body />
 	   		<div class="footer">
-	   			<div id='footer_logo'>
-           			<span class='copyright'>Copyright © 2002-2008 IPRAN. All Rights Reserved.</span>
+	   			<div id='footer_logo' class='blue'>
+           			<span class='copyright'>Copyright © 2015-2020 IPRAN. All Rights Reserved.</span>
 	   			</div>
            	</div>
 	</body>

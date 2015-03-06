@@ -1,25 +1,95 @@
 
 /* blue */
+.nav.blue{    
+    border-bottom: 2px solid #1798D1;
+}
 .blue .menu li,
- { 
+#export.blue ,
+#footer_logo.blue,
+#header .setcolor.blue,
+#header .setFontFamily .blue,
+#header .blue,
+#color_blue,
+#filter.blue,
+.blue#search,
+.searchContent #generated_graphs input.blue{ 
     background-color:#1798D1;
 }
-.blue .menu li a:hover { 
-    background-color:#317ef3;
+.blue#search{
+	border-color: #1798D1;
 }
-
+.blue .menu li a:hover,
+#color_blue:hover,
+#header .setFontFamily li.blue:hover{
+    background-color:#3cf;
+}
 #tabs_list.blue li{
     border: 1px solid #1798D1;
     background-color: #1798D1;
 }
-/*searchContent*/
-.searchContent .title{
-    border-bottom:1px solid #1798D1;
+#searchConditions.blue{	
+    border: 3px solid #1798D1;
 }
-.searchContent #generated_graphs a.blue {
+/*searchContent*/
+#logo .blue{
+    background:url("../images/blue/logo_blue.png");
+}
+.blue.add{    
+    background:url("../images/blue/add_blue_20.png");
+}
+.gray.add{    
+    background:url("../images/add_cancel_20.png");
+}
+.blue.less{    
+    background:url("../images/blue/add_blue_less_20.png");
+}
+
+.queryCondition.blue{
 	color:#1798D1;
 }
 
-#logo .blue{
-    background:url("../images/logo.png");
+/* orange */
+.nav.orange{    
+    border-bottom: 2px solid #fb8937;
+}
+.orange .menu li,
+#export.orange,
+#footer_logo.orange,
+#header .setcolor.orange,
+#header .setFontFamily .orange,
+#header .orange,
+#color_orange,
+#filter.orange,
+.orange#search,
+.searchContent #generated_graphs input.orange{ 
+    background-color:#fb8937;
+}
+.orange#search{
+	border-color: #fb8937;
+}
+.orange .menu li a:hover,
+#color_orange:hover,
+#header .setFontFamily li.orange:hover{ 
+    background-color:#fb6;
+}
+
+#tabs_list.orange li{
+    border: 1px solid #fb8937;
+    background-color: #fb8937;
+}
+/*searchContent*/
+#logo .orange{
+    background:url("../images/orange/logo_orange.png");
+}
+.orange.add{    
+    background:url("../images/orange/add_orange_20.png");
+}
+.orange.less{    
+    background:url("../images/orange/add_orange_less_20.png");
+}
+#searchConditions.orange{	
+    border: 3px solid #fb8937;
+}
+.queryCondition.orange{
+	color:#fb8937;
 }
